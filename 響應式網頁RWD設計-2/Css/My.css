@@ -1,0 +1,102 @@
+/*RWD*/
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+/*最上層目錄*/
+
+.navbar {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background-color: #5dc8e6;
+}
+
+.navbar a {
+    font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.over {
+    border-radius: 20px;
+    color: rgb(255, 255, 0) !important;
+    background-color: #3484fc !important;
+}
+
+.out {
+    transition: color 0.55s ease-in-out, background-color 0.55s ease-in-out, border-color 0.55s ease-in-out;
+    border-radius: 3px;
+}
+
+.down {
+    color: rgb(255, 255, 0) !important;
+    font-style: italic;
+}
+
+.outer {
+    background-color: #00ccff;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.outer a {
+    font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.outer a:hover {
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+aside {
+    width: 300px;
+    padding: 20px !important;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    color: #29627e;
+    border-radius: 10px;
+}
+
+aside>p {
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+footer {
+    background: linear-gradient(to bottom, #9ed7f1, white) !important;
+}
