@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>B11056051 | RWD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="B11056051,資管-作業,RWD" />
+    <meta name="keywords" content="B11056051,RWD,homework,作業" />
+    <meta name="author" content="B11056051">
+    <link rel="stylesheet" type="text/css" href="./RWD_style.css">
+</head>
+
+<body>
+    <h2>目前畫面寬度:<span id="res"></span></h2>
+    <hr class="hr2">
+    <script>
+        var res = document.getElementById("res");
+
+        res.innerHTML = window.innerWidth + " x " + window.innerHeight;
+        window.onresize = function() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            document.getElementById('res').innerHTML = w + " x " + h;
+        }
+    </script>
+    <header>
+        <h1>RWD作業</h1>
+        <a href="">
+            <h2>B11056051_RWD</h2>
+        </a>
+    </header>
+    <hr>
+    <article>
+        <section class="left">
+            <img src="https://i.ytimg.com/vi/bvWq8qxDSNc/maxresdefault.jpg" alt="屏科大NPUST" title="屏科大NPUST">
+            <h2>屏東科技大學行政大樓</h2><br>
+            <a href="https://reurl.cc/vd7kZk" target="_blank" title="行政大樓-地圖位" >行政大樓-地圖位置</a>
+        </section>
+        <aside class="right">
+            <h2>屏科大-行政單位</h2>
+            <ul>
+                <li>
+                    <a href="https://wp.npust.edu.tw/" target="_blank" title="屏科大首頁">屏科大首頁</a>
+                </li>
+                <li>
+                    <a href="http://aa.npust.edu.tw/1.htm" target="_blank" title="屏科大-教務處">屏科大-教務處</a>
+                </li>
+                <li>
+                    <a href="https://osa.npust.edu.tw/bin/home.php" target="_blank" title="屏科大-學務處">屏科大-學務處</a>
+                </li>
+            </ul>
+        </aside>
+    </article>
+    <hr>
+    <footer>
+        <h2>Copyright © 2022 B11056051 All Rights Reserved.</h2>
+    </footer>
+</body>
+
+</html>
