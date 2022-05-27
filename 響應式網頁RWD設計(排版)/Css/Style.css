@@ -2,6 +2,10 @@
     .container {
         width: 98%;
     }
+	img {
+		margin: 0px !important;
+		width: 50%;
+	}
 }
 
 img {
@@ -10,5 +14,5 @@ img {
 }
 
 .container {
-    width: 58%;
+    width: 98%;
 }
