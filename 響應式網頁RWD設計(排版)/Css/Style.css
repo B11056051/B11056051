@@ -1,0 +1,14 @@
+@media screen and (max-width:569px) {
+    .container {
+        width: 98%;
+    }
+}
+
+img {
+    padding: 5px;
+    border: 10px solid yellowgreen;
+}
+
+.container {
+    width: 58%;
+}

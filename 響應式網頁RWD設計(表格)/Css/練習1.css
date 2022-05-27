@@ -1,0 +1,54 @@
+@media screen and (max-width:450px) {
+    /*寬度小於450改變表格*/
+    p {
+        display: none;
+    }
+    .th,
+    .td {
+        display: table-cell;
+        padding: 5px;
+    }
+    .td {
+        display: block;
+        display: table;
+        text-align: center;
+        padding: 0px;
+    }
+    .tr:first-of-type {
+        display: none;
+    }
+    /* 統一寬度 */
+    .td::before {
+        content: attr(data-th);
+        display: inline-block;
+        width: 100px;
+        padding: 8px;
+        background-color: rgb(24, 142, 190);
+        color: white;
+        text-align: center;
+    }
+}
+
+* {
+    margin: 5px;
+    text-align: center;
+}
+
+p {
+    background-color: rgb(24, 63, 190);
+    color: white;
+    padding: 5px 40px;
+}
+
+.table {
+    border: 1px solid rgb(24, 142, 190);
+    display: table-row;
+    width: 100%;
+    border-collapse: separate;
+    white-space: nowrap;
+    border-spacing: 0px;
+}
+
+.href-page2 {
+    float: left;
+}

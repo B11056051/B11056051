@@ -1,0 +1,114 @@
+@media screen and (max-width:600px) {
+    .table-wrapper {
+        margin: 30px 15px;
+        overflow-x: scroll;
+    }
+    .table thead {
+        display: none;
+    }
+    .table td {
+        display: block;
+        padding: 0;
+    }
+    .table td::before {
+        content: attr(data-title);
+        display: inline-block;
+        width: 100%;
+        font-weight: 500;
+        padding: 6px 0;
+        color: white;
+        background-color: pink;
+    }
+    .table td:nth-child(2)::before {
+        background: yellow;
+    }
+    .table td:nth-child(3)::before {
+        background: blue;
+    }
+    .table td:nth-child(4)::before {
+        background: gray;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .table ul li {
+        list-style-type: none !important;
+        border-bottom: 2px solid green !important;
+        padding: 5px;
+        position: relative;
+        text-align: center;
+    }
+    img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+.table-wrapper {
+    margin: 50px;
+    box-shadow: 0px 35px 50px rgba(27, 31, 49, 0.1);
+    display: block;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    padding: 10px;
+}
+
+.table td {
+    border-right: 2px dashed black;
+}
+
+.table thead th {
+    color: brown;
+    background: lightpink;
+}
+
+.table thead th:nth-child(2) {
+    background: lightgoldenrodyellow;
+}
+
+.table thead th:nth-child(3) {
+    background: lightblue;
+}
+
+.table thead th:nth-child(4) {
+    background: lightgray;
+}
+
+.table ul {
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+}
+
+.table ul li {
+    border-bottom: 1px solid red;
+    padding: 5px;
+    position: relative;
+    list-style: circle;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.href-page1 {
+    float: right;
+    margin: 10px 30% 10px 0;
+}
+
+.href-page2 {
+    float: left;
+    margin: 10px 0 10px 30%;
+}

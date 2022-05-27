@@ -1,0 +1,157 @@
+/*
+<!--RWD-->
+@media (min-width: 1281px) {
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	
+}
+*/
+
+:root {
+    color-scheme: light dark;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body>* {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    width: auto;
+    padding: 0;
+    background-color: rgb(245, 245, 245);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 20%;
+    width: 100%;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: auto;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4.3vmin;
+    margin: 0.2vmax;
+    color: rgb(90, 92, 93);
+    display: table;
+}
+
+h2 {
+    font-size: 3.2vmin;
+    margin: 0px;
+    color: rgb(76, 165, 238);
+}
+
+a {
+    font-weight: bold;
+    font-size: 2.2vmin;
+    color: rgb(61, 61, 61);
+}
+
+a:link {
+    text-decoration: none;
+    background-color: #d8fde0;
+}
+
+a:visited {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: rgb(55, 110, 235);
+    color: rgb(220, 95, 95);
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+hr {
+    border-top: 2px solid rgba(85, 175, 255, 0.5);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: disclosure-closed;
+}
+
+li {
+    margin: 15px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/*
+border: 2px solid rgba(85, 175, 255, 0.5);
+flex: 0 2 48vmax; //調整section
+<meta http-equiv="refresh" content="5"; url=""> //5秒後跳轉
+<meta name="robots" content="noindex,nofollow"> //不讓robot抓取此網頁及網頁中的連結
+<link rel="canonical" href="https://b11056051.github.io/index.html" /> //如有重複相似網址，指定此網址為主網址
+<link rel="alternate" href="https://b11056051.github.io/index.html" hreflang="zh-TW" /> //網頁本地化，有多種語言時使用
+*/
