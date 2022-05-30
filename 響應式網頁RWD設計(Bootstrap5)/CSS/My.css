@@ -10,12 +10,20 @@
     .container {
         width: 768px;
     }
+
+	#header-img{
+		height:25rem !important;
+	}
 }
 
 @media screen and (max-width:767px) {
     .container {
         width: 50%;
     }
+	
+	#header-img{
+		height:auto !important;
+	}
 }
 
 @media (min-width: 768px) {
@@ -26,6 +34,11 @@
 
 
 /*最上層目錄*/
+
+#header-img{
+	height:30rem;
+	width:80%;
+}
 
 .navbar {
     display: inline-block;
