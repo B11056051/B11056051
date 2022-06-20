@@ -32,6 +32,9 @@
     .embed-container {
         height: 55rem;
     }
+    body {
+        font-size: 2vmin !important;
+    }
 }
 
 @media screen and (min-width: 48em) and (max-width:64em) and (orientation: landscape) {
@@ -43,6 +46,9 @@
     }
     .embed-container {
         height: 55rem;
+    }
+    body {
+        font-size: 2vmin !important;
     }
 }
 
@@ -58,6 +64,9 @@
     }
     .embed-container {
         height: 45rem;
+    }
+    body {
+        font-size: 2.8vmin !important;
     }
 }
 
@@ -76,5 +85,8 @@
     }
     .embed-container {
         height: 40rem;
+    }
+    body {
+        font-size: 4vmin !important;
     }
 }
