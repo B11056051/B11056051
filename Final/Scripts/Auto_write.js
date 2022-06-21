@@ -176,7 +176,7 @@ function SetX() {
     text2 = "\n \n \r \n如果可以的話，請告訴我你的名字，以便在你下次來訪時讓我可以記得你!(可隨時更改)";
     text3 = "(名字使用cookie儲存，已對cookie使用HttpOnly防止XXS攻擊)"
     var text = text1 + text2;
-    speed = 60;
+    speed = 0;
 
     Write(text, speed);
 }
