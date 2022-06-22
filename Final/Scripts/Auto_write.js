@@ -70,10 +70,10 @@ function Welcome() {
         document.cookie = "Date=" + Now_Date;
     }
 
-    if (Last_count == 1) {
-        return "首次"
-    } else {
+    if (Last_count > 1) {
         return "第" + Last_count + "天"
+    } else {
+        return "首次"
     }
 }
 
