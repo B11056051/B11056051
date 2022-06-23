@@ -1,7 +1,7 @@
 const dogImage = document.getElementById('dog-img');
 const dogButton = document.getElementById('btn-dog');
 
-fetchDogImage()
+//fetchDogImage()
 
 dogButton.addEventListener('click', fetchDogImage);
 

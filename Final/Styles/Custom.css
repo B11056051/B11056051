@@ -1,11 +1,10 @@
 @font-face {
-    font-family: 'naikaifont';
+    font-family: naikaifont;
     src: url(https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular.woff) format("woff");
 }
 
 * {
-    font-family: 'naikaifont', sans-serif;
-    font-weight: bold;
+    font-family: 'NaikaiFont', sans-serif;
 }
 
 html {
@@ -75,16 +74,13 @@ body {
     padding-bottom: 3px;
     background-image: linear-gradient(rgb(0, 220, 255), rgb(0, 220, 255));
     background-position: 0 100%;
-    /*OR bottom left*/
     background-size: 0% 3px;
     background-repeat: no-repeat;
     transition: background-size 0.3s, background-position 0s 0.3s;
-    /*change after the size immediately*/
 }
 
 .un:hover {
     background-position: 100% 100%;
-    /*OR bottom right*/
     background-size: 100% 3px;
 }
 
