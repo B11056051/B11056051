@@ -20,9 +20,9 @@ function Random_Animal() {
                 animalImage.innerHTML = `<img src="${data.message || data.image || data[0].url}"/>`;
             })
     } else if (Choice_animals.value == "All") {
-        var Array_random = function(images) {
-            var keys = Object.keys(images);
-            return images[keys[keys.length * Math.random() << 0]];
+        var Array_random = function(obj) {
+            var keys = Object.keys(obj);
+            return obj[keys[keys.length * Math.random() << 0]];
         };
         fetch(Array_random(images))
             .then(response => response.json())
