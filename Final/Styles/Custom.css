@@ -111,15 +111,20 @@ body {
 
 .mytoast-1 {
     position: absolute;
-    opacity: 100%;
-    left: 35%;
-    top: 10%;
+    left: auto;
+    top: 2%;
     width: auto;
     z-index: 150;
 }
 
+#liveToast {
+    border-radius: 8px;
+    border: solid 2px #89f7c3;
+    box-shadow: 0px 3px 15px 5px rgb(80, 80, 80);
+}
+
 #host_name {
-    color: #ff8b06;
+    color: #ff6a06;
 }
 
 .card {
