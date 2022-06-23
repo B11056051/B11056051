@@ -1,14 +1,33 @@
-const dogImage = document.getElementById('dog-img');
-const dogButton = document.getElementById('btn-dog');
+const animalImage = document.getElementById('animal-img');
+const animalButton = document.getElementsByClassName('btn-animal')[0];
+var Choice_animals = document.getElementById('Animals_Choice');
 
-fetchDogImage()
+var images = {
+    'Dog': 'https://dog.ceo/api/breeds/image/random',
+    'Cat': 'https://api.thecatapi.com/v1/images/search',
+    'Fox': 'https://randomfox.ca/floof'
+}
 
-dogButton.addEventListener('click', fetchDogImage);
+Random_Animal();
 
-function fetchDogImage() {
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(response => response.json())
-        .then(data => {
-            dogImage.innerHTML = `<img src="${data.message}"/>`;
-        })
+animalButton.addEventListener('click', Random_Animal);
+
+function Random_Animal() {
+    if (Choice_animals.value in images) {
+        fetch(images[Choice_animals.value])
+            .then(response => response.json())
+            .then(data => {
+                animalImage.innerHTML = `<img src="${data.message || data.image || data[0].url}"/>`;
+            })
+    } else if (Choice_animals.value == "All") {
+        var Array_random = function(images) {
+            var keys = Object.keys(images);
+            return images[keys[keys.length * Math.random() << 0]];
+        };
+        fetch(Array_random(images))
+            .then(response => response.json())
+            .then(data => {
+                animalImage.innerHTML = `<img src="${data.message || data.image || data[0].url}"/>`;
+            })
+    }
 }

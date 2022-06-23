@@ -113,8 +113,8 @@ if (toastTrigger) {
             // 將名字寫入cookie
             document.cookie = "Name=" + host_name.innerHTML;
             document.cookie = "path=/";
-            document.cookie = 'HttpOnly=true';
-            document.cookie = 'Secure';
+            //document.cookie = 'HttpOnly=true';
+            //document.cookie = 'Secure';
 
             //重新輸入
             auto_write.innerHTML = "";

@@ -162,7 +162,7 @@ body {
     height: 100%;
 }
 
-#dog-img img {
+#animal-img img {
     object-fit: cover;
     max-width: 100%;
     height: auto;
@@ -170,11 +170,19 @@ body {
     margin-bottom: 20px;
 }
 
-#btn-dog {
+.btn-animal-style {
     position: sticky;
     top: 60rem;
-    left: 18rem;
-    width: 25%;
+    left: auto;
+    width: auto;
+}
+
+.btn-color {
+    background-color: #83ecd6;
+    color: #3b3b3b;
+    font-size: 15px;
+    box-shadow: 0px 0px 10px 2px rgb(253, 148, 50);
+    padding-left: 10px;
 }
 
 

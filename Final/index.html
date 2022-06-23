@@ -107,11 +107,23 @@
         <main id="Main" class="row opacity-75 justify-content-center">
             <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-7 col-xxl-7 mb-5 myWidth">
                 <article class="p-5 border border-3 border-white rounded rounded-5 images justify-content-center" align='center'>
-                    <div id="dog-img" class="col-12 img-fluid">
+                    <!-- 圖片顯示區域 -->
+                    <div id="animal-img" class="col-12 img-fluid">
                     </div>
-                    <button id="btn-dog" type="button" class="col-5 btn btn-outline-secondary btn-lg fs-4 fw-bold">
-                        隨機狗狗圖片
-                    </button>
+                    <!-- 選擇按鈕 -->
+                    <div class="btn-group btn-animal-style col-6">
+                        <button type="button" class="btn-animal btn btn-outline-secondary btn-lg fs-4 fw-bold">
+                            取得隨機圖片
+                        </button>
+                        <div class="btn-group">
+                            <select id="Animals_Choice" class="btn-color form-select form-select-sm fs-4 fw-bold" aria-label=".form-select-sm example">
+                                <option value="All" selected>選擇動物</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                                <option value="Fox">Fox</option>
+                            </select>
+                        </div>
+                    </div>
                 </article>
             </div>
             <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-4 col-xxl-4 myWidth">
