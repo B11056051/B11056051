@@ -8,7 +8,7 @@
     <link rel='icon' href='' type='image/x-icon' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0,shrink-to-fit=no,user-scalable=yes" />
     <meta name="description" content="B11056051的期末RWD網頁作品，使用bootstrap製作" />
-    <meta name="keywords" content="RWD,RWD網頁設計,HTML5,CSS,JS,網頁設計,bootstrap,bootstrap5,首頁" />
+    <meta name="keywords" content="RWD,RWD網頁設計,網頁設計,首頁,HTML5,CSS,JS,bootstrap,bootstrap5,Cat,Dog,Fox" />
     <meta name="author" content="B11056051">
 
     <!--Meta Robots SEO-->
@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QMSCGHDQ8"></script>
     <script>
@@ -67,6 +68,10 @@
 </head>
 
 <body class="vh-100" id="particles-js">
+    <div id="Read_animation">
+        <div id="sub_Read"></div>
+    </div>
+
     <div class="container panel">
 
         <header id="Header" class="row opacity-75">
@@ -105,6 +110,7 @@
 
         <!-- 文章主要區塊 -->
         <main id="Main" class="row opacity-75 justify-content-center">
+            <!-- 左區塊 -->
             <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-7 col-xxl-7 mb-5 myWidth">
                 <article class="p-5 border border-3 border-white rounded rounded-5 images justify-content-center" align='center'>
                     <!-- 圖片顯示區域 -->
@@ -126,9 +132,10 @@
                     </div>
                 </article>
             </div>
+
+            <!-- 右區塊 -->
             <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-4 col-xxl-4 myWidth">
                 <article class="p-5 bg-dark text-light rounded rounded-5 justify-content-center" id="Auto_write">
-
                     <!-- 輸入框 -->
                     <div id="hide" class="name input-group mt-3">
                         <input id="input_text" type="text" class="form-control needs-validation fw-bold fs-4" placeholder="你的名字" aria-label="Username">
@@ -136,6 +143,7 @@
                     </div>
                 </article>
             </div>
+
             <!--彈出提示框-->
             <div class="mytoast-1">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -165,12 +173,14 @@
     </div>
 
     <!--JS-->
+    <script src="Scripts/Read_animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" integrity="sha256-0H3Nuz3aug3afVbUlsu12Puxva3CP4EhJtPExqs54Vg=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js" integrity="sha256-icjghcPaibMf1jv4gQIGi5MeWNHem2SispcorCiCfSg=" crossorigin="anonymous"></script>
     <script src="Scripts/particles/particles.js"></script>
-    <script src="Scripts/Auto_write.js"></script>
+    <script type="module" src="Scripts/Auto_write.js"></script>
     <script src="Scripts/Random_Image.js"></script>
-    <script src="Scripts/Time.js"></script>
+    <script type="module" src="Scripts/Time.js"></script>
 </body>
 
 </html>

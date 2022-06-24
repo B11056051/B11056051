@@ -1,8 +1,9 @@
+import { Now, Year, Years, Month, Months, Day, Days, Hour, Hours, Minute, Minutes, Second, Seconds } from './Time.js'; //格式化時間
+
 var auto_write = document.getElementById("Auto_write"); //自動打字區域
 var hide = document.getElementById("hide"); //輸入框
 
-var text = "";
-var length = 0;
+
 var speed = 0;
 
 //自動寫字
@@ -39,7 +40,7 @@ var count_cookie = document.cookie.split(";"); //取得cookie內容
 function Welcome() {
     var count = 0; //登入次數
 
-    var Now_Date = year + "年" + month + "月" + day + "號"; //現在時間
+    var Now_Date = Years + Months + Days; //現在時間
 
     //上次登入時間
     for (var i = 0; i < count_cookie.length; i++) {
@@ -107,7 +108,7 @@ if (toastTrigger) {
         } else {
             input_text.style.boxShadow = "";
             host_name.innerHTML = input_text.value;
-            var toast = new bootstrap.Toast(toastLiveExample)
+            var toast = new bootstrap.Toast(toastLiveExample);
             toast.show()
 
             // 將名字寫入cookie
@@ -129,52 +130,28 @@ if (toastTrigger) {
 
 
 //現在時間
-function formatTime(time) {
-    if (time < 10) {
-        time = "0" + time;
-    }
-    return time;
-}
-
-var now = new Date();
-var year = now.getFullYear();
-var month = now.getMonth() + 1;
-var day = now.getDate();
-var hour = formatTime(now.getHours());
-var minute = formatTime(now.getMinutes());
-var second = formatTime(now.getSeconds());
-
 function Now_time() {
-
-    let output = (year + "年" + month + "月" + day + "號" + " " + hour + "時" + minute + "分");
-    return output;
+    return Years + Months + Days + " " + Hours + Minutes;
 }
 
+//時間判斷
+function Time() {
+    if (Hour >= 0 && Hour <= 6) {
+        return "凌晨了，要早點睡喔！";
+    } else if (Hour >= 7 && Hour <= 12) {
+        return "早上了，美好的一天開始了！";
+    } else if (Hour >= 13 && Hour <= 18) {
+        return "下午了，記得吃午餐了嗎！";
+    } else if (Hour >= 19 && Hour <= 24) {
+        return "晚上了，忙了一整天了吧，早點去睡吧！";
+    }
+}
 
 //資料設定
 function SetX() {
-
-    //時間判斷
-    function Time() {
-        var now = new Date();
-        var hour = now.getHours();
-        if (hour >= 0 && hour <= 6) {
-            return "凌晨了，要早睡喔！";
-        }
-        if (hour >= 7 && hour <= 12) {
-            return "早上了，記得要吃早餐喔！";
-        }
-        if (hour >= 13 && hour <= 18) {
-            return "下午了，累的話要休息一下喔！";
-        }
-        if (hour >= 19 && hour <= 24) {
-            return "晚上了，忙了一整天了吧，早點去睡吧！";
-        }
-    }
-
-    text1 = "嗨! " + Name() + "\n\n歡迎" + Welcome() + "來到這個地方\n" + "\n目前的時間為:  " + Now_time() + "\n\n現在已經是" + Time();
-    text2 = "\n \n \r \n如果可以的話，請告訴我你的名字，以便在你下次來訪時讓我可以記得你!(可隨時更改)";
-    text3 = "(名字使用cookie儲存，已對cookie使用HttpOnly防止XXS攻擊)"
+    var text1 = "嗨! " + Name() + "\n\n歡迎" + Welcome() + "來到這個地方\n" + "\n目前的時間為:  " + Now_time() + "\n\n現在已經是" + Time();
+    var text2 = "\n \n \r \n如果可以的話，請告訴我你的名字，以便在你下次來訪時讓我可以記得你!(可隨時更改)";
+    var text3 = "(名字使用cookie儲存，已對cookie使用HttpOnly防止XXS攻擊)"
     var text = text1 + text2;
     speed = 60;
 

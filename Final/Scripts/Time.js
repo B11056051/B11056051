@@ -1,23 +1,33 @@
 var Time = document.getElementById('Time');
 
-
-function showTime() {
-    var date = new Date();
-    var h = date.getHours();
-    var m = date.getMinutes();
-    var s = date.getSeconds();
-
-    h = formatTime(h);
-    m = formatTime(m);
-    s = formatTime(s);
-
-    function formatTime(time) {
-        if (time < 10) {
-            time = "0" + time;
-        }
-        return time;
+// 格式化時間
+function formatTime(time) {
+    if (time < 10) {
+        time = "0" + time;
     }
-    Time.innerHTML = h + "時" + m + "分" + s + "秒";
+    return parseInt(time);
 }
 
+var Now = new Date();
+var Year = Now.getFullYear();
+var Month = formatTime(Now.getMonth() + 1);
+var Day = formatTime(Now.getDate());
+var Hour = formatTime(Now.getHours());
+var Minute = formatTime(Now.getMinutes());
+var Second = formatTime(Now.getSeconds());
+
+
+var Years = parseInt(Year) + '年';
+var Months = parseInt(Month) + '月';
+var Days = parseInt(Day) + '日';
+var Hours = parseInt(Hour) + '時';
+var Minutes = parseInt(Minute) + '分';
+var Seconds = parseInt(Second) + '秒';
+
+// 彈出提示框用
+function showTime() {
+    Time.innerHTML = Hours + Minutes + Seconds;
+}
 showTime();
+
+export { Now, Year, Years, Month, Months, Day, Days, Hour, Hours, Minute, Minutes, Second, Seconds }; // 導出時間模塊
