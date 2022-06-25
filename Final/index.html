@@ -8,7 +8,7 @@
     <link rel='icon' href='' type='image/x-icon' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0,shrink-to-fit=no,user-scalable=yes" />
     <meta name="description" content="B11056051的期末RWD網頁作品，使用bootstrap製作" />
-    <meta name="keywords" content="RWD,RWD網頁設計,網頁設計,首頁,HTML5,CSS,JS,bootstrap,bootstrap5,Cat,Dog,Fox" />
+    <meta name="keywords" content="RWD,RWD網頁設計,網頁設計,首頁,HTML5,CSS,JS,bootstrap,bootstrap5,Cat,Dog,Fox,random Cat,random Dog,random Fox,Random image" />
     <meta name="author" content="B11056051">
 
     <!--Meta Robots SEO-->
@@ -68,12 +68,25 @@
 </head>
 
 <body class="vh-100" id="particles-js">
-    <div id="Read_animation">
-        <div id="sub_Read"></div>
+    <!-- 網頁加載動畫 -->
+    <div id="Reading-Animation">
+        <!-- 加載小物件(立方體) -->
+        <div id="Sub-Reading">
+            <div id="Control">
+                <div id="Space">
+                    <div class="face" id="front"></div>
+                    <div class="face" id="back"></div>
+                    <div class="face" id="left"></div>
+                    <div class="face" id="right"></div>
+                    <div class="face" id="top"></div>
+                    <div class="face" id="bottom"></div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
     </div>
 
     <div class="container panel">
-
         <header id="Header" class="row opacity-75">
             <!-- 導覽列 -->
             <nav class="col p-3 navbar navbar-expand-lg navbar-light bg-light d-inline-flex">
@@ -165,7 +178,7 @@
         <!-- 腳尾 -->
         <footer id="Footer" class="row opacity-75">
             <div class="col fw-bold">
-                <p>Last modified: 2022-06-23</p>
+                <p>Last modified: 2022-06-26</p>
                 <address>You can contact me at <a href="mailto:aaaa35963596@gmail.com" target="_blank">aaaa35963596@gmail.com</a></address>
                 <p>Copyright © 2022 B11056051(Wen-Jin Lin). All rights reserved.</p>
             </div>
