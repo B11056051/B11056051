@@ -12,6 +12,8 @@ btn.addEventListener("click", function() {
 
     //清空結果區域
     result.innerHTML = "";
+
+    //判斷錯誤
     if (min == "" || max == "" || num == "") {
         Toast("請輸入完整資料!");
     } else if (num <= 0) {
@@ -44,8 +46,9 @@ btn.addEventListener("click", function() {
             }
         }
 
-        //如果太多數字，就換行
+        //輸出
         for (var i = 0; i < array.length; i++) {
+            //如果太多數字，就換行
             if (i % 20 == 0) {
                 result.innerHTML += "<br>";
             }

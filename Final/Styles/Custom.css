@@ -328,6 +328,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.8rem !important;
+    text-align: center;
 }
 
 .alert {
