@@ -52,14 +52,16 @@ html {
     animation-name: my-A;
     animation-duration: 3s;
     perspective-origin: 300% -300%;
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
     animation-iteration-count: infinite;
     transform-style: preserve-3d;
 }
 
+/*
 #Control:hover {
     animation-play-state: running;
 }
+*/
 
 @keyframes my-A {
     from {
