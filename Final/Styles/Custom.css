@@ -325,7 +325,8 @@ body {
 #Min,
 #Max,
 #Num,
-#Count {
+#Count,
+#Speed {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.8rem !important;

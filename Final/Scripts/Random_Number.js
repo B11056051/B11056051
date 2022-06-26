@@ -5,12 +5,14 @@ var Count = document.getElementById("Count"); // 重複抽的次數
 var btn = document.getElementById("btn");
 var result = document.getElementById("result");
 var Sum_Count = document.getElementById("Sum_Counts"); //顯示執行次數
+var Speed = document.getElementById("Speed"); //執行速度
 
 btn.addEventListener("click", function() {
     var min = Number(Min.value);
     var max = Number(Max.value);
     var num = Number(Num.value);
     var count = Number(Count.value);
+    var speed = Number(Speed.value);
 
     //清空結果區域
     result.innerHTML = "";
@@ -33,6 +35,7 @@ btn.addEventListener("click", function() {
 
         var z = 0;
         var Steps = 0; //已執行的次數
+        var speed = 0.1; //執行速度(ms)
 
         while (z < count) {
             setTimeout(() => {
@@ -79,7 +82,7 @@ btn.addEventListener("click", function() {
                 Steps++;
                 Sum_Count.innerHTML = `<p> (已執行${Steps}次)</p>`;
 
-            }, 100 * z)
+            }, (speed * 1000) * z)
 
             z++;
         }

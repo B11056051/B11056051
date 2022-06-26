@@ -7,7 +7,7 @@
     <title>B11056051 | 期末RWD作品-隨機亂數產生器</title>
     <link rel='icon' href='' type='image/x-icon' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0,shrink-to-fit=no,user-scalable=yes" />
-    <meta name="description" content="B11056051的期末RWD網頁作品，使用bootstrap製作" />
+    <meta name="description" content="B11056051的期末RWD網頁作品，使用bootstrap製作的隨機亂數產生器" />
     <meta name="keywords" content="RWD,RWD網頁設計,HTML5,CSS,JS,網頁設計,bootstrap,bootstrap5,抽數字,抽籤,隨機亂數產生器" />
     <meta name="author" content="B11056051(Wen-Jin Lin)">
 
@@ -15,7 +15,7 @@
     <meta name='robots' content='max-image-preview:large' />
 
     <!-- Facebook Open Graph -->
-    <meta property="og:title" content="B11056051 | 期末RWD作品-隨機亂數產生器" />
+    <meta property="og:title" content="B11056051 | 隨機亂數產生器" />
     <meta property="og:type" content="website" />
     <meta property="fb:app_id" content="" />
     <meta property="og:url" content="https://b11056051.github.io/Final/Web/Random_number.html" />
@@ -24,14 +24,14 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="" />
     <meta property="og:image:height" content="" />
-    <meta property="og:site_name" content="期末RWD作品-隨機亂數產生器" />
+    <meta property="og:site_name" content="隨機亂數產生器" />
     <meta property="og:description" content="B11056051的期末RWD網頁作品，使用bootstrap5製作" />
     <!-- Twitter Open Graph -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@B11056051(Wen-Jin Lin)" />
     <meta name="twitter:creator" content="@B11056051(Wen-Jin Lin)" />
     <meta name="twitter:url" content="https://b11056051.github.io/Final/Web/Random_number.html" />
-    <meta name="twitter:title" content="期末RWD作品-隨機亂數產生器" />
+    <meta name="twitter:title" content="隨機亂數產生器" />
     <meta name="twitter:description" content="B11056051的期末RWD網頁作品，使用bootstrap5製作" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:image:alt" content="" />
@@ -112,11 +112,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="num" class="m-2 fs-3 fw-bold">抽出數量</label>
-                                    <input type="number" class="form-control m-2" id="Num" placeholder="請輸入要抽出的數量">
+                                    <input type="number" class="form-control m-2 mb-4" id="Num" placeholder="請輸入要抽出的數量">
                                 </div>
                                 <div class="form-group">
-                                    <label for="count" class="m-2 fs-3 fw-bold">執行次數</label>
-                                    <input type="number" class="form-control m-2" id="Count" placeholder="請輸入要重複執行的次數(默認1次)">
+                                    <label for="count" class="m-2 fs-3 fw-bold">執行次數(默認1次)</label>
+                                    <input type="number" class="form-control m-2 mb-4" id="Count" placeholder="請輸入要重複執行的次數">
+                                </div>
+                                <div class="form-group">
+                                    <label for="speed" class="m-2 fs-3 fw-bold">執行速度(單位秒，默認0.1s)</label>
+                                    <input type="number" class="form-control m-2 mb-4" id="Speed" placeholder="請輸入要執行的速度(可用小數點)">
                                 </div>
                                 <button type="button" class="btn btn-primary fs-2 fw-bold m-5" id="btn">抽數字</button>
                             </form>
