@@ -47,12 +47,12 @@ html {
 
 #Control {
     perspective: 25000px;
-    animation-name: my-A;
-    animation-duration: 2s;
     perspective-origin: 300% -300%;
     /*animation-play-state: paused;*/
-    animation-iteration-count: infinite;
+    animation-name: my-A;
     transform-style: preserve-3d;
+    animation: my-A 3s infinite cubic-bezier(.5, -0.2, .25, .9);
+    animation-direction: alternate;
 }
 
 
@@ -63,10 +63,22 @@ html {
 */
 
 @keyframes my-A {
-    from {
+    0% {
+        transform: scale3d(0, 0, 0);
+    }
+    15% {
+        transform: scale3d(0, 0, 0);
+    }
+    30% {
+        transform: scale3d(3, 3, 3);
+    }
+    50% {
         transform: rotate3d(1, 0, 0, 0deg);
     }
-    to {
+    70% {
+        transform: rotate3d(1, 0, 0, 0deg);
+    }
+    100% {
         transform: rotate3d(0, 1, 1, 360deg);
     }
 }
@@ -266,7 +278,7 @@ body {
 #animal-img img {
     object-fit: cover;
     max-width: 100%;
-    height: auto;
+    max-height: 50rem !important;
     border-radius: 15px;
     margin-bottom: 20px;
 }
