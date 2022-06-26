@@ -324,11 +324,16 @@ body {
 
 #Min,
 #Max,
-#Num {
+#Num,
+#Count {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.8rem !important;
     text-align: center;
+}
+
+#Sum_Counts {
+    color: #02ceac;
 }
 
 .alert {

@@ -1,14 +1,16 @@
 var Min = document.getElementById("Min");
 var Max = document.getElementById("Max");
 var Num = document.getElementById("Num"); //要抽出多少個數字
+var Count = document.getElementById("Count"); // 重複抽的次數
 var btn = document.getElementById("btn");
 var result = document.getElementById("result");
-
+var Sum_Count = document.getElementById("Sum_Counts"); //顯示執行次數
 
 btn.addEventListener("click", function() {
     var min = Number(Min.value);
     var max = Number(Max.value);
     var num = Number(Num.value);
+    var count = Number(Count.value);
 
     //清空結果區域
     result.innerHTML = "";
@@ -22,41 +24,64 @@ btn.addEventListener("click", function() {
         Toast("最小值不可大於最大值!");
     } else if (num > max - min + 1) {
         Toast("抽出的數量已超出範圍!");
+    } else if (count < 0) {
+        Toast("執行次數請大於0!");
     } else {
-        var array = [];
-        for (var i = 0; i < num; i++) {
-            var random = Math.floor(Math.random() * (max - min + 1) + min);
-            //不重複數字判斷
-            if (array.indexOf(random) == -1) {
-                array.push(random);
-            } else {
-                i--;
-            }
+        if (count == 0) {
+            count = 1;
         }
 
-        //泡沫排序法
-        for (var k = 0; k < array.length; k++) {
-            for (var o = 0; o < array.length; o++) {
-                if (array[o] > array[o + 1]) {
-                    let temp = 0;
-                    temp = array[o];
-                    array[o] = array[o + 1];
-                    array[o + 1] = temp;
+        var z = 0;
+        var Steps = 0; //已執行的次數
+
+        while (z < count) {
+            setTimeout(() => {
+                result.innerHTML = "";
+                Sum_Count.innerHTML = "";
+                var array = [];
+
+                for (var i = 0; i < num; i++) {
+                    var random = Math.floor(Math.random() * (max - min + 1) + min);
+                    //不重複數字判斷
+                    if (array.indexOf(random) == -1) {
+                        array.push(random);
+                    } else {
+                        i--;
+                    }
                 }
-            }
-        }
 
-        //輸出
-        for (var i = 0; i < array.length; i++) {
-            //如果太多數字，就換行
-            if (i % 20 == 0) {
-                result.innerHTML += "<br>";
-            }
-            result.innerHTML += array[i] + ", ";
-            //去掉最後一個逗號
-            if (i == array.length - 1) {
-                result.innerHTML = result.innerHTML.substring(0, result.innerHTML.length - 2);
-            }
+                //泡沫排序法
+                for (var k = 0; k < array.length; k++) {
+                    for (var o = 0; o < array.length; o++) {
+                        if (array[o] > array[o + 1]) {
+                            let temp = 0;
+                            temp = array[o];
+                            array[o] = array[o + 1];
+                            array[o + 1] = temp;
+                        }
+                    }
+                }
+
+                //輸出
+                for (var t = 0; t < array.length; t++) {
+                    //如果太多數字，就換行
+                    if (t % 20 == 0) {
+                        result.innerHTML += "<br>";
+                    }
+                    result.innerHTML += array[t] + ", ";
+                    //去掉最後一個逗號
+                    if (t == array.length - 1) {
+                        result.innerHTML = result.innerHTML.substring(0, result.innerHTML.length - 2);
+                    }
+                }
+
+                //顯示已執行的次數
+                Steps++;
+                Sum_Count.innerHTML = `<p> (已執行${Steps}次)</p>`;
+
+            }, 100 * z)
+
+            z++;
         }
     }
 });
