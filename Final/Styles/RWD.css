@@ -107,4 +107,7 @@
     .particles-js-canvas-el {
         height: 120rem !important;
     }
+    .card-img-top {
+        height: 150px;
+    }
 }

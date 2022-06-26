@@ -246,7 +246,7 @@ body {
 }
 
 .card-img-top {
-    height: 26rem !important;
+    height: 250px;
     border-radius: 0 0 20px 20px !important;
     border: solid 3px #89f7c3;
     box-shadow: 0px 3px 15px 5px rgb(100, 200, 200);
@@ -322,9 +322,15 @@ body {
 }
 
 .alert {
+    min-height: 100%;
     font-size: 1.5rem;
     font-weight: bold;
-    height: auto;
+    background-color: rgb(71, 71, 71);
+    border: solid 2px #7aebfa;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 3px rgb(83, 83, 83);
+    color: #fff;
+    margin: 0 2.5rem;
 }
 
 
