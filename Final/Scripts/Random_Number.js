@@ -14,8 +14,7 @@ btn.addEventListener("click", function() {
     var count = Number(Count.value);
     var speed = Number(Speed.value);
 
-    //清空結果區域
-    result.innerHTML = "";
+
 
     //判斷錯誤
     if (min == "" || max == "" || num == "") {
