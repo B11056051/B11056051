@@ -44,8 +44,6 @@ html {
 }
 
 #Control {
-    width: 100px;
-    height: 100px;
     perspective: 25000px;
     animation-name: my-A;
     animation-duration: 3s;
