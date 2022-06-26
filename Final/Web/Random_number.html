@@ -104,15 +104,15 @@
                             <form>
                                 <div class="form-group">
                                     <label for="min" class="m-2 fs-3 fw-bold">最小值</label>
-                                    <input type="number" class="form-control m-2" id="min" placeholder="請輸入最小值">
+                                    <input type="number" class="form-control m-2" id="Min" placeholder="請輸入最小值">
                                 </div>
                                 <div class="form-group">
                                     <label for="max" class="m-2 fs-3 fw-bold">最大值</label>
-                                    <input type="number" class="form-control m-2" id="max" placeholder="請輸入最大值">
+                                    <input type="number" class="form-control m-2" id="Max" placeholder="請輸入最大值">
                                 </div>
                                 <div class="form-group">
                                     <label for="num" class="m-2 fs-3 fw-bold">抽出數量</label>
-                                    <input type="number" class="form-control m-2" id="num" placeholder="請輸入抽出數量">
+                                    <input type="number" class="form-control m-2" id="Num" placeholder="請輸入要抽出的數量">
                                 </div>
                                 <button type="button" class="btn btn-primary fs-2 fw-bold m-5" id="btn">抽數字</button>
                             </form>
@@ -120,10 +120,31 @@
                     </section>
                     <!-- 結果顯示區 -->
                     <section class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                        <div class="alert" id="result" role="alert"></div>
+                        <div align="center" class="alert">
+                            <h1 class="fw-bold">產生結果</h1>
+                            <hr class="w-75 border border-2 rounded rounded-5" />
+                            <div id="result" role="alert">
+                            </div>
+                        </div>
                     </section>
                 </div>
             </article>
+            <!--彈出提示框-->
+            <div class="mytoast-2 d-flex top-0 start-50 translate-middle-x justify-content-center w-100">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <!-- 標題 -->
+                    <div class="toast-header">
+                        <img src="" class="me-2" alt="">
+                        <strong class="me-auto fs-3">提示訊息</strong>
+                        <small id="Time" class="fs-4"></small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <!-- 內容 -->
+                    <div class="toast-body">
+                        <p class="fw-bold fs-3"><span id="host_name-B"></span></p>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- 腳尾 -->

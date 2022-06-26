@@ -83,6 +83,9 @@
     .particles-js-canvas-el {
         height: 120rem !important;
     }
+    .alert {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 30em) {
@@ -109,5 +112,8 @@
     }
     .card-img-top {
         height: 150px;
+    }
+    .alert {
+        margin: 0;
     }
 }

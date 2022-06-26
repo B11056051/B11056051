@@ -230,6 +230,11 @@ body {
     z-index: 150;
 }
 
+.mytoast-2 {
+    position: absolute;
+    z-index: 99999;
+}
+
 #liveToast {
     border-radius: 8px;
     border: solid 2px #89f7c3;
@@ -238,6 +243,10 @@ body {
 
 #host_name {
     color: #ff6a06;
+}
+
+#host_name-B {
+    color: #ff4006;
 }
 
 .card {
@@ -313,9 +322,9 @@ body {
     margin: 2rem;
 }
 
-#min,
-#max,
-#num {
+#Min,
+#Max,
+#Num {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.8rem !important;
