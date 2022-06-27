@@ -8,7 +8,7 @@ var images = {
     'Fox': 'https://randomfox.ca/floof'
 }
 
-Random_Animal();
+//Random_Animal();
 
 animalButton.addEventListener('click', Random_Animal);
 
