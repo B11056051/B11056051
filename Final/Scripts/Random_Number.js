@@ -39,7 +39,7 @@ btn_run.addEventListener("click", function() {
         Toast("指定抽出的數量較大，可能會造成網頁當機，是否繼續執行?");
     } 
     */
-    else if (count < 0) {
+    else if (count <= 0) {
         Toast("執行次數請大於0!");
     } else {
 
