@@ -35,40 +35,41 @@ function Write(text, speed) {
     return;
 }
 
-//來訪紀錄，HttpOnly cookie保護
+//來訪紀錄，HttpOnly cookie保護(還沒有...)
 var count_cookie = document.cookie.split(";"); //取得cookie內容
 function Welcome() {
-    var count = 0; //登入次數
-
     var Now_Date = Years + Months + Days; //現在時間
 
     //上次登入時間
     for (var i = 0; i < count_cookie.length; i++) {
         if (count_cookie[i].indexOf("Date") != -1) {
             var Last_Data = count_cookie[i].split("=")[1];
-            //console.log("上次登入:" + Last_Data);
+            console.log("上次登入:" + Last_Data);
         }
     };
 
     //登入總次數
     for (var j = 0; j < count_cookie.length; j++) {
         if (count_cookie[j].indexOf("Last_count") != -1) {
-            let Last_count1 = count_cookie[j].split("=")[1];
+            var Last_count1 = count_cookie[j].split("=")[1];
             var Last_count = Last_count1.split(",")[0];
-            //console.log("登入次數:" + Last_count + "次");
+            console.log("登入次數:" + Last_count + "次");
         }
     }
 
-    if (count_cookie == "") {
-        count = 1;
-        Last_count = count;
+    console.log(Last_Data);
+    console.log(Now_Date);
+    if (Last_Data !== Now_Date) {
+        Last_count = Number(Last_count) + 1;
         document.cookie = "Last_count=" + Last_count;
         document.cookie = "Date=" + Now_Date;
-    } else if (Last_Data != Now_Date) {
-        count++;
-        Last_count = parseInt(count) + parseInt(Last_count);
+        console.log("test2" + Last_count);
+    } else {
+
+        Last_count = 1;
         document.cookie = "Last_count=" + Last_count;
         document.cookie = "Date=" + Now_Date;
+        console.log("test1" + Last_count);
     }
 
     if (Last_count > 1) {
@@ -113,6 +114,7 @@ if (toastTrigger) {
 
             // 將名字寫入cookie
             document.cookie = "Name=" + host_name.innerHTML;
+            document.cookie = "expires=" + Now.toUTCString();
             document.cookie = "path=/";
             //document.cookie = 'HttpOnly=true';
             //document.cookie = 'Secure';

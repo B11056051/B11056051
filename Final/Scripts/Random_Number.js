@@ -33,13 +33,9 @@ btn_run.addEventListener("click", function() {
         Toast("抽出的數量已超出範圍!");
     } else if (num == max - min + 1) {
         Toast("抽出的數量將等於範圍內全部的數");
-    }
-    /*
-    else if (num >= 1000) {
-        Toast("指定抽出的數量較大，可能會造成網頁當機，是否繼續執行?");
-    } 
-    */
-    else if (count <= 0) {
+    } else if (num >= 100) {
+        Toast_Waring("指定抽出的數量較大，可能會造成網頁當機，是否繼續執行?");
+    } else if (count <= 0) {
         Toast("執行次數請大於0!");
     } else {
 
@@ -166,10 +162,20 @@ btn_clear.addEventListener("click", function() {
 
 //彈出提示框
 var toastLiveExample = document.getElementById('liveToast'); // 提示框
-var host_name = document.getElementById('host_name-B'); //寫入訊息
+var host_name = document.getElementById('host_name_B'); //寫入訊息
 
 function Toast(message) {
     host_name.innerHTML = message;
     var toast = new bootstrap.Toast(toastLiveExample);
+    toast.show()
+}
+
+//彈出提示框(警告詢問)
+var toastLiveExample_Waring = document.getElementById('liveToast-Waring'); // 提示框
+var host_name_Waring = document.getElementById('host_name_Waring'); //寫入訊息
+
+function Toast_Waring(message) {
+    host_name_Waring.innerHTML = message;
+    var toast = new bootstrap.Toast(toastLiveExample_Waring);
     toast.show()
 }

@@ -17,12 +17,12 @@ var Minute = formatTime(Now.getMinutes());
 var Second = formatTime(Now.getSeconds());
 
 
-var Years = parseInt(Year) + '年';
-var Months = parseInt(Month) + '月';
-var Days = parseInt(Day) + '日';
-var Hours = parseInt(Hour) + '時';
-var Minutes = parseInt(Minute) + '分';
-var Seconds = parseInt(Second) + '秒';
+var Years = Year + '年';
+var Months = Month + '月';
+var Days = Day + '日';
+var Hours = Hour + '時';
+var Minutes = Minute + '分';
+var Seconds = Second + '秒';
 
 // 彈出提示框用
 function showTime() {
