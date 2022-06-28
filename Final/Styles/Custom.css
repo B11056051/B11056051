@@ -252,6 +252,14 @@ body {
     border: 2.5px #00aeff solid;
 }
 
+.my-color-2 {
+    border: 2.5px #006eff solid;
+    align-items: center;
+    width: 15rem;
+    margin: 10rem 0 0 -3rem;
+    padding: 5px;
+}
+
 .mytoast-1 {
     position: absolute;
     left: auto;
@@ -269,18 +277,18 @@ body {
     margin: auto;
     width: 38rem;
     text-align: center;
-    z-index: 8999;
+    z-index: 150;
 }
 
 .mytoast-3 {
-    position: absolute;
-    top: 15%;
+    position: fixed;
+    top: 23%;
     bottom: auto;
     left: 0;
     right: 0;
     margin: auto;
     width: 38rem;
-    z-index: 9999;
+    z-index: 160;
 }
 
 #liveToast {

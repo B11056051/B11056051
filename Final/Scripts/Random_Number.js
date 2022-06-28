@@ -36,12 +36,16 @@ btn_run.addEventListener("click", function() {
         Toast_Waring("指定抽出的數量較大，可能會造成網頁當機，是否繼續執行?");
 
         Continue.addEventListener("click", function() {
-            let toast_Waring = new bootstrap.Toast(toastLiveExample_Waring);
-            toast_Waring.hide();
             Main();
         })
     } else if (count <= 0 && Count.value.split() != '') {
         Toast("執行次數請大於0!");
+    } else if (count >= 10000) {
+        Toast_Waring("執行次數較大，可能會造成網頁當機，是否繼續執行?");
+
+        Continue.addEventListener("click", function() {
+            Main();
+        })
     } else {
         Main();
     }
@@ -171,7 +175,7 @@ var host_name = document.getElementById('host_name_B'); //寫入訊息
 
 function Toast(message) {
     host_name.innerHTML = message;
-    var toast = new bootstrap.Toast(toastLiveExample);
+    let toast = new bootstrap.Toast(toastLiveExample);
     toast.show();
 }
 
@@ -183,6 +187,6 @@ var Continue = document.getElementById('Run');
 
 function Toast_Waring(message) {
     host_name_Waring.innerHTML = message;
-    var toast = new bootstrap.Toast(toastLiveExample_Waring);
+    let toast = new bootstrap.Toast(toastLiveExample_Waring);
     toast.show();
 }
