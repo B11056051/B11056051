@@ -35,7 +35,7 @@ function Write(text, speed) {
     return;
 }
 
-//來訪紀錄，HttpOnly cookie保護(還沒有...)
+//來訪紀錄，HttpOnly cookie保護(在Name()函數，還沒有用...)
 var count_cookie = document.cookie.split(";"); //取得cookie內容
 function Welcome() {
     var Now_Date = Years + Months + Days; //現在時間

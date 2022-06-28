@@ -1,6 +1,7 @@
 const animalImage = document.getElementById('animal-img');
 const animalButton = document.getElementsByClassName('btn-animal')[0];
-var Choice_animals = document.getElementById('Animals_Choice');
+var Choice_animals = document.getElementById('Animals_Choice'); //選擇的種類
+
 
 var images = {
     'Dog': 'https://dog.ceo/api/breeds/image/random',
