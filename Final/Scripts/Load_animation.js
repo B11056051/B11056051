@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var timer = setTimeout(() => Reading.style.visibility = "hidden", 1000 * Times);
 
     Leave.addEventListener("click", function() {
+
         clearTimeout(timer);
     })
 });

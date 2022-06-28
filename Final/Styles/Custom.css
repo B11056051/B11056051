@@ -154,7 +154,7 @@ body {
 /* 主要區塊 */
 
 .container {
-    max-width: 85%;
+    max-width: 90%;
 }
 
 .panel {
@@ -170,13 +170,10 @@ body {
 
 /* 上方導覽列 */
 
-#Header {
-    box-shadow: 0px 0px 15px 1px rgb(226, 217, 85);
-}
-
-#nav {
+#Nav {
     padding: 15px;
     background-color: rgb(233, 233, 233);
+    box-shadow: 0px 0px 15px 1px rgb(226, 217, 85);
 }
 
 
@@ -184,20 +181,44 @@ body {
 
 .ticker-container {
     position: relative;
-    top: 0.6rem;
+    top: 10px;
     left: auto;
     right: auto;
-    height: 6rem;
+    bottom: 0;
+    height: auto;
     width: 100%;
-    padding: 10px;
-    background-color: rgb(65, 65, 65);
-    margin: 1rem 0;
+    padding: 0px;
+    background-color: rgb(70, 70, 70);
+    box-shadow: 0px 0px 10px 1.5px rgb(200, 120, 210);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #ticker {
-    position: absolute;
-    color: rgb(207, 205, 205);
+    display: inline-block;
+    color: rgb(205, 205, 205);
+    min-width: 100%;
+    padding: 0px;
     font-size: 3rem;
+    white-space: nowrap;
+    /*perspective: 25000px;
+    perspective-origin: 300% -300%;*/
+    /*animation-play-state: paused;*/
+    animation: my-ticker 15s infinite cubic-bezier(0, 0, 1, 1);
+}
+
+#ticker p {
+    margin-bottom: 0;
+}
+
+@keyframes my-ticker {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
 }
 
 
@@ -252,10 +273,10 @@ body {
 /* 主要文章區塊 */
 
 #Main {
+    position: relative;
     background-color: rgb(233, 233, 233);
     box-shadow: 0px 0px 10px 0px rgb(100, 200, 200);
-    position: relative;
-    top: 1rem;
+    top: 20px;
     padding-top: 5rem;
     padding-bottom: 10rem;
 }
@@ -474,6 +495,6 @@ body {
     position: relative;
     background-color: rgb(233, 233, 233);
     padding: 15px;
-    top: 20px;
+    top: 35px;
     box-shadow: 0px 0px 10px 1px rgb(228, 168, 100);
 }
