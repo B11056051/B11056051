@@ -1,4 +1,5 @@
 /* How to use? : Check the GitHub README
+套件儲存庫: https://github.com/VincentGarreau/particles.js
 /* ----------------------------------------------- */
 
 /* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
