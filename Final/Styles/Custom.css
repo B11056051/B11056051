@@ -135,6 +135,20 @@ html {
     transform: rotateX(-90deg) translateZ(50px);
 }
 
+#Leave {
+    align-items: center;
+    width: 15rem;
+    margin: 10rem 0 0 -3rem;
+    padding: 5px;
+}
+
+#Exit {
+    align-items: center;
+    width: 15rem;
+    margin: 5rem 0 0 -3rem;
+    padding: 5px;
+}
+
 
 /* body */
 
@@ -296,10 +310,6 @@ body {
 
 .my-color-2 {
     border: 2.5px #006eff solid;
-    align-items: center;
-    width: 15rem;
-    margin: 10rem 0 0 -3rem;
-    padding: 5px;
 }
 
 .mytoast-1 {
