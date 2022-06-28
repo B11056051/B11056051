@@ -197,6 +197,36 @@ body {
     background-size: 100% 3px;
 }
 
+.un-red {
+    display: inline-block;
+    padding-bottom: 3px;
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0));
+    background-position: 50% 100%;
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0s 0.3s;
+}
+
+.un-red:hover {
+    background-position: 50% 100%;
+    background-size: 100% 3px;
+}
+
+.un-green {
+    display: inline-block;
+    padding-bottom: 3px;
+    background-image: linear-gradient(rgb(30, 255, 0), rgb(30, 255, 0));
+    background-position: 50% 100%;
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0s 0.3s;
+}
+
+.un-green:hover {
+    background-position: 50% 100%;
+    background-size: 100% 3px;
+}
+
 
 /* 主要文章區塊 */
 
@@ -232,7 +262,25 @@ body {
 
 .mytoast-2 {
     position: absolute;
-    z-index: 99999;
+    top: 3%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 38rem;
+    text-align: center;
+    z-index: 8999;
+}
+
+.mytoast-3 {
+    position: absolute;
+    top: 15%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 38rem;
+    z-index: 9999;
 }
 
 #liveToast {
@@ -257,6 +305,11 @@ body {
 
 #host_name_Waring {
     color: #ff0000;
+}
+
+.toast-body-style-1 {
+    border-top: 2px solid #fd8f45;
+    padding: 8px 0 4px 0 !important;
 }
 
 .card {
